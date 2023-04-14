@@ -1,0 +1,132 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --Soft-Magenta: hsl(300, 69%, 71%);
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+  min-height: 100vh;
+  background-color: var(--Violet);
+  background-image: url("../images/bg-desktop.svg");
+  background-size: cover;
+}
+main {
+  padding: 40px 80px 30px;
+  color: white;
+  position: relative;
+}
+main > img {
+  padding-bottom: 100px;
+}
+main .content {
+  display: flex;
+}
+main .content img {
+  margin-right: 60px;
+  width: 850px;
+  height: 600px;
+}
+main .content .text h1 {
+  font-family: 'Poppins', sans-serif;
+  margin: 60px 0 30px;
+  font-size: 40px;
+  width: 500px;
+}
+main .content .text p {
+  font-size: 18px;
+  line-height: 1.6;
+  width: 510px;
+  color: rgb(255 255 255 / 80%);
+}
+main .content .text button {
+  border: none;
+  cursor: pointer;
+  padding: 10px 30px;
+  margin-top: 30px;
+  width: 180px;
+  height: 60px;
+  border-radius: 30px;
+  font-size: 18px;
+  color: var(--Violet);
+}
+main .content .text button:hover {
+  background-color: var(--Soft-Magenta);
+  color: rgb(255 255 255 / 70%);
+}
+.icons {
+  position: absolute;
+  right: 150px;
+  bottom: -40px;
+  height: 50px;
+}
+.icons ul {
+  list-style: none;
+  display: flex;
+}
+.icons ul li {
+  font-size: 20px;
+  width: 45px;
+  height: 45px;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.icons ul li:not(:last-child) {
+  margin-right: 20px;
+}
+.icons ul li:hover {
+  border-color: var(--Soft-Magenta);
+  color: var(--Soft-Magenta);
+}
+@media (max-width: 575px) {
+  body {
+    background-image: url("../images/bg-mobile.svg");
+  }
+  main {
+    padding: 20px;
+  }
+  main > img {
+    width: 200px;
+    padding: 30px 0 60px;
+  }
+  main .content {
+    flex-direction: column;
+    text-align: center;
+  }
+  main .content img {
+    width: 350px;
+    height: 250px;
+    margin: 0 auto;
+  }
+  main .content .text h1 {
+    width: 350px ;
+    font-size: 28px;
+  }
+  main .content .text p {
+    width: 340px;
+  }
+  main .content .text button {
+    width: 240px;
+    height: 45px;
+    font-size: 16px;
+  }
+  .icons {
+    right: 133px;
+    bottom: -60px;
+  }
+  .icons ul li {
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
+  }
+}
